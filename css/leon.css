@@ -90,9 +90,14 @@ body {
   font-size: 20px;
   text-align: center;
 }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
 @media (max-width: 767px) {
   .special-heading {
-    font: var(--section-padding);
+    font: var(--pd-main);
   }
   .special-heading + p {
     margin: -20px 0 0;
@@ -184,13 +189,12 @@ body {
   position: relative;
 }
 .landing .intro-text {
-  width: 320px;
+  width: 475px;
   max-width: 100%;
   text-align: left;
   position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50% , -50%);
+  top: 39%;
+  left: 3%;
 }
 .landing .intro-text h1 {
   color: var(--clr-primary-500);
@@ -199,43 +203,40 @@ body {
   line-height: 1.8px;
 }
 .landing .intro-text p {
+  color: var(--clr-neutral-200);
   font-size: 19px;
   line-height: 1.8;
-  color: #f6f6f6;
 }
 /* End Landing Section */
 /* Start Features */
 .features {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: #f6f6f6;
-}
-.features .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
+  background-color: var(--clr-neutral-200);
 }
 .features .feat {
-  padding: 20px;
+  padding: calc(var(--pd-main) / 3);
   text-align: center;
 }
 .features .feat i {
   color: var(--clr-primary-500);
 }
 .features .feat h3 {
+  font-size: 26px;
+  color: var(--clr-secondary-700);
   font-weight: var(--fw-extra-bold);
   margin: 30px 0;
 }
 .features .feat p {
-  color: #777;
-  line-height: 1.8;
+  color: var(--clr-neutral-600);
   font-size: 17px;
+  line-height: 1.8;
 }
 /* End Features */
 /* Start Services */
 .services {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
 }
 .services .services-content {
   display: grid;
@@ -298,8 +299,8 @@ body {
 /* End Services */
 /* Start Portfolio */
 .portfolio {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
   background-color: var(--pd-main);
 }
 .portfolio-content {
@@ -328,8 +329,8 @@ body {
 /* End Portfolio */
 /* Start About */
 .about {
-  padding-top: var(--section-padding);
-  padding-bottom: calc(var(--section-padding) + 60px);
+  padding-top: var(--pd-main);
+  padding-bottom: calc(var(--pd-main) + 60px);
 }
 .about .about-content {
   margin-top: 100px;
@@ -403,13 +404,13 @@ body {
 /* End About */
 /* Start Contact */
 .contact {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
   background-color: var(--pd-main);
 }
 .contact .info {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
   text-align: center;
 }
 .contact .info .label {
