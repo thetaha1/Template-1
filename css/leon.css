@@ -337,7 +337,9 @@ body {
 .about .about-content .image {
   position: relative;
   width: 250px;
-  height: 375px;
+}
+.about .about-content .image img {
+  max-width: 100%;
 }
 @media (max-width: 991px) {
   .about .about-content .image {
@@ -347,11 +349,11 @@ body {
 .about .about-content .image::before {
   content: "";
   position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 90px;
+  height: calc(100% + 30px);
   background-color: #ebeced;
-  width: 69px;
-  height: calc(100% + 20px);
-  top: -40px;
-  left: -20px;
   z-index: -1;
 }
 .about .about-content .image::after {
@@ -368,11 +370,9 @@ body {
 @media (max-width: 991px) {
   .about .about-content .image::before,
   .about .about-content .image::after {
-    display: none;
+    /* display: none; */
+    opacity: 0.4;
   }
-}
-.about .about-content .image img {
-  max-width: 100%;
 }
 .about .about-content .text {
   margin-left: 150px;
@@ -383,38 +383,34 @@ body {
   margin-bottom: 50px;
 }
 .about .about-content .text hr {
-  width: 50%;
+  width: 60%;
   display: inline-block;
   border-color: var(--clr-primary-500);
 }
 .about .about-content .text p:last-of-type {
+  color: var(--clr-neutral-600);
   line-height: 2;
-  color: #777;
 }
 /* End About */
 /* Start Contact */
 .contact {
-  padding-top: var(--pd-main);
-  padding-bottom: var(--pd-main);
   background-color: var(--clr-neutral-200);
 }
 .contact .info {
-  padding-top: var(--pd-main);
-  padding-bottom: var(--pd-main);
   text-align: center;
 }
 .contact .info .label {
+  color: var(--clr-secondary-700);
   font-size: 30px;
   font-weight: var(--fw-extra-bold);
-  color: var(--clr-secondary-700);
   letter-spacing: -2px;
   margin-bottom: 15px;
 }
 .contact .info a {
   display: block;
+  color: var(--clr-primary-500);
   font-size: 30px;
   font-weight: var(--fw-extra-bold);
-  color: var(--clr-primary-500);
   text-decoration: none;
 }
 .contact .info .social {
@@ -424,8 +420,8 @@ body {
   font-size: 16px;
 }
 .contact .info .social i {
-  margin-left: 10px;
   color: var(--clr-secondary-700);
+  margin-left: 10px;
 }
 @media (max-width: 767px) {
   .contact .info .label,
@@ -436,14 +432,14 @@ body {
 /* End Contact */
 /* Start Footer */
 .footer {
+  color: var(--clr-neutral-100);
   background-color: var(--clr-secondary-700);
-  color: white;
-  padding: 30px 10px;
   text-align: center;
+  padding: 30px 10px;
   font-size: 18px;
 }
 .footer span {
-  font-weight: bold;
   color: var(--clr-primary-500);
+  font-weight: bold;
 }
 /* End Footer */
