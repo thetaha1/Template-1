@@ -33,6 +33,7 @@ html {
 }
 body {
   font-family: var(--ff-main);
+  background-color: var(--clr-neutral-100);
 }
 /* Set the scrollbar width and height */
 ::-webkit-scrollbar {
@@ -94,6 +95,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  margin-top: 100px;
+}
+.pd-60 {
+  padding-top: var(--pd-main);
+  padding-bottom: var(--pd-main);
 }
 @media (max-width: 767px) {
   .special-heading {
@@ -210,8 +216,6 @@ body {
 /* End Landing Section */
 /* Start Features */
 .features {
-  padding-top: var(--pd-main);
-  padding-bottom: var(--pd-main);
   background-color: var(--clr-neutral-200);
 }
 .features .feat {
@@ -234,16 +238,6 @@ body {
 }
 /* End Features */
 /* Start Services */
-.services {
-  padding-top: var(--pd-main);
-  padding-bottom: var(--pd-main);
-}
-.services .services-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 100px;
-}
 .services .services-content .srv {
   display: flex;
   margin-bottom: 40px;
@@ -265,20 +259,22 @@ body {
   margin-bottom: 20px;
 }
 .services .services-content .srv .text p {
-  color: #777;
+  color: var(--clr-neutral-600);
   font-weight: var(--fw-light);
   line-height: 1.6;
 }
-
 .services .services-content .image {
+  height: 100%;
+  background-size: cover;
   text-align: center;
   position: relative;
-  background-size: cover;
 }
+/* ? Object fit cover */
 .services .services-content .image img {
   width: 260px;
-  border-radius: 10px;
-  filter: contrast(0.8) brightness(1.3);
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 .services .services-content .image::before {
   content: "";
@@ -286,31 +282,30 @@ body {
   height: 120%;
   position: absolute;
   top: -10%;
-  right: 11%;
+  right: 20px;
   background-color: var(--clr-secondary-700);
-  border-radius: 5px;
+  border-radius: 30px;
   z-index: -1;
 }
 @media (max-width: 1199px) {
-  .image.image-col {
+  .services .container {
+    width: 750px;
+  }
+  .services-content .col:last-child {
     display: none;
   }
 }
 /* End Services */
 /* Start Portfolio */
 .portfolio {
-  padding-top: var(--pd-main);
-  padding-bottom: var(--pd-main);
-  background-color: var(--pd-main);
-}
-.portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 70px;
+  background-color: var(--clr-neutral-200);
 }
 .portfolio-content .card {
   background-color: #fff;
+  box-shadow: 6px 6px 0px 0px #282828;
+  transition: var(--dt-main);
+}
+.portfolio-content .card:hover {
   box-shadow: 10px 10px 0px 0px #10cab7;
 }
 .portfolio-content .card img {
@@ -323,27 +318,22 @@ body {
   margin-bottom: 10px;
 }
 .portfolio-content .card .info p {
-  color: #777;
+  color: var(--clr-neutral-600);
   line-height: 1.6;
 }
 /* End Portfolio */
 /* Start About */
-.about {
-  padding-top: var(--pd-main);
-  padding-bottom: calc(var(--pd-main) + 60px);
-}
 .about .about-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
   margin-top: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .about .about-content {
-    flex-direction: column;
     text-align: center;
   }
-}
+} */
 .about .about-content .image {
   position: relative;
   width: 250px;
@@ -358,8 +348,8 @@ body {
   content: "";
   position: absolute;
   background-color: #ebeced;
-  width: 100px;
-  height: calc(100% + 80px);
+  width: 69px;
+  height: calc(100% + 20px);
   top: -40px;
   left: -20px;
   z-index: -1;
@@ -368,12 +358,12 @@ body {
   top: -40px;
   content: "";
   position: absolute;
-  width: 120px;
-  height: 300px;
-  border-left: 80px solid var(--clr-primary-500);
-  border-bottom: 80px solid var(--clr-primary-500);
+  width: 84px;
+  height: 225px;
+  border-left: 67px solid var(--clr-primary-500);
+  border-bottom: 44px solid var(--clr-primary-500);
   z-index: -1;
-  right: -150px;
+  right: -111px;
 }
 @media (max-width: 991px) {
   .about .about-content .image::before,
@@ -385,7 +375,7 @@ body {
   max-width: 100%;
 }
 .about .about-content .text {
-  flex-basis: calc(100% - 500px);
+  margin-left: 150px;
 }
 .about .about-content .text p:first-of-type {
   font-weight: bold;
@@ -406,7 +396,7 @@ body {
 .contact {
   padding-top: var(--pd-main);
   padding-bottom: var(--pd-main);
-  background-color: var(--pd-main);
+  background-color: var(--clr-neutral-200);
 }
 .contact .info {
   padding-top: var(--pd-main);
